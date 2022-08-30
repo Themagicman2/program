@@ -1,0 +1,31 @@
+class Car
+{
+    private string name;    
+    private int year;
+    private int weight;
+    
+public void setName (string n) { name = n; } 
+
+public string getName() { return name; }
+
+public void setYear (int y) { year = y; } 
+
+public int  getYear() { return year; }
+
+public void setWeight (int w) { weight = w; } 
+
+public int  getWeight() { return weight; }
+}
+
+class Program{
+    public static void Main(){
+        Car c = new Car();
+        c.setName("Ford F150");
+        c.setYear(1975);
+        c.setWeight(1846);
+
+        Console.WriteLine(c.getName());
+        Console.WriteLine(c.getYear());
+        Console.WriteLine(c.getWeight());
+    }
+}
