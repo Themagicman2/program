@@ -1,31 +1,57 @@
 class Car
 {
-    private string name;    
-    private int year;
-    private int weight;
+    Class carlist
+    {
+        static void Main(string[] args)
+        {
+            int carval = 1;
     
-public void setName (string n) { name = n; } 
+            while (carval != 0)
+            {
+                Console.WriteLine("CarRegister");
+                Console.WriteLine("==============");
+                Console.WriteLine("1. Register New Car");
+                Console.WriteLine("2. Print all cars in list");
+                Console.WriteLine("0. End");
+                Console.Write("Make your choice: ");
+                carval = Convert.ToInt32(Console.ReadLine());
 
-public string getName() { return name; }
-
-public void setYear (int y) { year = y; } 
-
-public int  getYear() { return year; }
-
-public void setWeight (int w) { weight = w; } 
-
-public int  getWeight() { return weight; }
+            }
+        }
+    }
+    private string color;    
+    private int year;
+    private string model;
+public string Color
+    {
+    get { return color; }
+    set { color = value; }
+    }
+public int Year
+    {
+    get { return year; }
+    set { year = value; }
+    }
+public string Model
+    {
+    get { return model; }
+    set { model = value; }
+    }
+    public Car (string c, int y, string m)
+        {
+            color = c;
+            year = y;
+            model = m;
+        }
 }
+class Program 
+{
+  static void Main(string[] args)
+  {
+    Car Ford = new Car("Red", 1969, "Mustang");
+    Car Opel = new Car("White", 2005, "Astra");
 
-class Program{
-    public static void Main(){
-        Car c = new Car();
-        c.setName("Ford F150");
-        c.setYear(1975);
-        c.setWeight(1846);
-
-        Console.WriteLine(c.getName());
-        Console.WriteLine(c.getYear());
-        Console.WriteLine(c.getWeight());
+    Console.WriteLine(Ford.Model);
+    Console.WriteLine(Opel.Model);
     }
 }
